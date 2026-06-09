@@ -1,19 +1,20 @@
+# Case 1
 def decimal_para_binario():
     while True:
         entrada = input('|\n' + '| Informe um número decimal para ser convertido para binario: ')
         print('|' + '-' * 70 + '|')
 
-        letra = False
         # Voltar para o menu inical
         if entrada.lower() == 'sair':
             return
 
+        # Tratativa de erro, caso o usuario de entrada vazia
         if entrada == '':
-
             print('|' + ' Entrada invalida.'.ljust(70) + '|' '\n| Digite um numero ou sair para voltar ao menu inicial.'.ljust(73) + '|')
             print('|' + '-' * 70 + '|')
             continue
 
+        # tratativa de erro, caso o usuario não digite um numero valido
         try:
             num = int(entrada)
             break
@@ -21,11 +22,6 @@ def decimal_para_binario():
             print('\n|' + '-' * 70 + '|')
             print('|' + ' Invalido!'.ljust(70) + '|' '\n| Infome apenas numero inteiro ou sair para voltar ao menu inicial.'.ljust(73) + '|')
             print('|' + '-' * 70 + '|')
-
-
-
-
-
 
     # Declaração de Variaveis
     resto = []
@@ -62,9 +58,11 @@ def decimal_para_binario():
     for digito in resto:
         resultado = resultado + str(digito)
 
+    print('|' + '-' * 70 + '|')
     print('|' + ' Resultado: ' + resultado.ljust(58) + '|')
     print('|' + '-' * 70 + '|\n')
 
+# Case 2
 def binario_para_decimal():
     while True:
         binario = input('|\n' + '| Informe um numero binario para ser convertido para decimal'.ljust(70) + '|')
@@ -74,7 +72,7 @@ def binario_para_decimal():
         # Voltar para o menu inicial
         if binario.lower() == 'sair':
             return
-        # tratativa de erro, caso o usuario apenas de enter
+        # Tratativa de erro, caso o usuario de entrada vazia
         if binario == '':
             print('| invalido!\n| digite apenas um numero binario ou sair para voltar ao menu inicial'.ljust(70) + '|')
             continue
