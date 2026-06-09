@@ -2,6 +2,16 @@
 from menu import mostrar_menu
 from conversoes import decimal_para_binario
 from conversoes import binario_para_decimal
+from conversoes import decimal_para_octal
+from conversoes import octal_para_decimal
+from conversoes import decimal_para_hexadecimal
+from conversoes import hexadecimal_para_decimal
+from conversoes import binario_para_octal
+from conversoes import octal_para_binario
+from conversoes import binario_para_hexadecimal
+from conversoes import hexadecimal_para_binario
+from conversoes import octal_para_hexadecimal
+from conversoes import hexadecimal_para_octal
 
 
 while True:
@@ -25,34 +35,34 @@ while True:
             binario_para_decimal()
 
         case 3:
-            print('Conversão de Decimal para Octal')
+            decimal_para_octal()
 
         case 4:
-            print('Conversão de Octal para Decimal')
+            octal_para_decimal()
 
         case 5:
-            print('Conversão de Decimal para hexadecimal')
+            decimal_para_hexadecimal()
 
         case 6:
-            print('Conversão de Hexadecimal para Decimal')
+            hexadecimal_para_decimal()
 
         case 7:
-            print('Conversão de Binario para Octal')
+            binario_para_octal()
 
         case 8:
-            print('Conversão de Octal para Binario ')
+            octal_para_binario()
 
         case 9:
-            print('Conversão de Binario para Hexadecimal')
+            binario_para_hexadecimal()
 
         case 10:
-            print('Conversão de Hexadecimal para Binario')
+            hexadecimal_para_binario()
 
         case 11:
-            print('Conversão de Octal para Hexadecimal')
+            octal_para_hexadecimal()
 
         case 12:
-            print('Conversão Hexadecimal para Octal')
+            hexadecimal_para_octal()
 
         # Caso o usuario escolha sair, encerra o programa
         case 0:
@@ -62,3 +72,4 @@ while True:
         # Tratativa de erro, caso o usuario digite um valor que não esteja dentre as opçoes
         case _:
             print('|' ' Opção ' + str(opcao) + ' é invalida\n' + 'Escolha um valor entre 0 e 12 assim como mostra o Menu abaixo')
+
