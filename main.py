@@ -9,10 +9,10 @@ while True:
 
     # Bloco para tratativa de erro caso o usuario coloque letras
     try:
-        print('\n|' + '-' * 70 + '|')
         opcao = int(input('|' ' Opção: ' ) )
     except ValueError:
-        print('Opção Invalida\nDigite apenas numeros, dentre as opções abaixo ')
+        print('|' ' Opção Invalida\n| Digite apenas numeros, dentre as opções abaixo ')
+
         continue
 
     # Estrutura switch para o menu
@@ -61,4 +61,4 @@ while True:
 
         # Tratativa de erro, caso o usuario digite um valor que não esteja dentre as opçoes
         case _:
-            print('Opção ' + str(opcao) + ' é invalida\n' + 'Escolha um valor entre 0 e 12 assim como mostra o Menu abaixo')
+            print('|' ' Opção ' + str(opcao) + ' é invalida\n' + 'Escolha um valor entre 0 e 12 assim como mostra o Menu abaixo')
