@@ -65,7 +65,7 @@ def decimal_para_binario():
 # Case 2
 def binario_para_decimal():
     while True:
-        binario = input('|\n' + '| Informe um numero binario para ser convertido para decimal'.ljust(70) + '|')
+        binario = input('|\n' + '| Informe um numero binario para ser convertido para decimal: ')
         print('|' + '-' * 70 + '|')
 
         letra = False
@@ -74,7 +74,8 @@ def binario_para_decimal():
             return
         # Tratativa de erro, caso o usuario de entrada vazia
         if binario == '':
-            print('| invalido!\n| digite apenas um numero binario ou sair para voltar ao menu inicial'.ljust(70) + '|')
+            print('| invalido!'.ljust(71) + '|' '\n| Digite apenas um numero binario ou sair para voltar ao menu inicial'.ljust(73) + '|')
+            print('|' + '-' * 70 + '|')
             continue
 
         # tratativa de erro, caso o usuario digite letras
@@ -82,7 +83,8 @@ def binario_para_decimal():
             if digito.isalpha():
                 letra = True
         if letra:
-            print('| Invalido, não digite letras. \n| Digite apenas um numero binario ou sair para voltar ao menu inicial.'.ljust(71) + '|')
+            print('| Invalido, não digite letras.'.ljust(71) + '|' '\n| Digite apenas um numero binario ou sair para voltar ao menu inicial.'.ljust(73) + '|')
+            print('|' + '-' * 70 + '|')
             continue
 
         valido = True
@@ -92,7 +94,8 @@ def binario_para_decimal():
             if digito != '0' and digito != '1':
                 valido = False
         if not valido:
-            print('| Invalido, numero digitado não é um numero binario \n| Digite apenas um numero binario ou sair para voltar ao menu inicial.'.ljust(71) + '|')
+            print('| Invalido, numero digitado não é um numero binario.'.ljust(71) + '|' + '\n| Digite apenas um numero binario ou sair para voltar ao menu inicial.'.ljust(72) + '|')
+            print('|' + '-' * 70 + '|')
             continue
 
         break
@@ -110,7 +113,8 @@ def binario_para_decimal():
     for digito in binario:
         digito = int(digito)
         valor = digito * 2**exponente
-        print('| Passo %d: %d x 2**%d = %d'  % (passo_a_passo, digito, exponente, valor))
+        mensagem_passo = (' Passo %d: %d x 2**%d = %d'  % (passo_a_passo, digito, exponente, valor))
+        print('|' + mensagem_passo.ljust(70) + '|' )
         resultado = resultado + valor
         exponente = exponente - 1
 
@@ -126,8 +130,11 @@ def binario_para_decimal():
         conta_valores = conta_valores + str(valor) + '+'
 
 
-    print('| Passo %d: Some os valores dos resultados dos passos %s' % (passo_a_passo, conta_passos))
-    print('|' + ' Resultado: %s = %d' % (conta_valores, resultado) + '|' )
+    mensagem_Ultpassos = (' Passo %d: Some os valores dos resultados dos passos %s' % (passo_a_passo, conta_passos))
+    print('|' + mensagem_Ultpassos.ljust(70) + '|')
+    mensagem_resultado = (' Resultado: %s = %d' % (conta_valores, resultado))
+    print('|' + '-' * 70 + '|')
+    print('|' + mensagem_resultado.ljust(70) + '|' )
     print('|' + '-' * 70 + '|\n')
 
 
